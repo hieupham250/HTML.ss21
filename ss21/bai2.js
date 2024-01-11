@@ -1,11 +1,12 @@
-let answer = +prompt("nhập số bất kì");
-Number(answer);
+let answer = +prompt("Nhập số bất kỳ");
 let result;
-if (answer % 2 == 0){
+
+if (isNaN(answer)) {
+    result = "Giá trị không hợp lệ";
+} else if (answer % 2 === 0) {
     result = "Chẵn";
-} else if (answer % 2 != 0){
-    result = "lẻ";
 } else {
-    result = "giá trị ko hợp lệ";
+    result = "Lẻ";
 }
+
 document.write(result);
